@@ -1,0 +1,50 @@
+﻿Why have you separated the CreateAnimal() method from the client code?
+I did it for one purpose. I wanted the subclasses to create specialized objects. If you
+look carefully, you see that only this “creational part” varies across the products. I discuss
+this in detail in the “Q&A Session” section of Chapter 24.
+
+What are the advantages of using a factory like this?
+You are separating the code that varies from the code that does not
+vary (in other words, the advantages of using the Simple Factory
+pattern are still present), which helps you easily maintain the code.
+The code is not tightly coupled, so you can add new classes such as
+Lion, Bear, and so on, at any time in the system without modifying
+the existing architecture. In other words, I followed the “closed for
+modification but open for extension” principle.
+
+What are the challenges of using a factory like this?
+If you need to deal with many different types of objects, then the overall performance
+of the system can be affected.
+
+The Factory Method pattern supports two parallel hierarchies. Is this correct?
+Good catch. Yes, from the class diagram, it is evident that this pattern supports
+parallel class hierarchies.
+In this example, AnimalFactory, DogFactory, and TigerFactory are placed in one
+hierarchy, and IAnimal, Dog, and Tiger are placed in another hierarchy. So, you can see
+that the creators and their creations/products are the two hierarchies that are running in
+parallel.
+
+You should always mark the factory method with an abstract keyword so that
+subclasses can complete them. Is this correct?
+No. You may be interested in a default factory method when the creator has no
+subclasses. In that case, you cannot mark the factory method with an abstract keyword.
+However, to see the real power of the Factory Method pattern, you may need to
+follow the design that is implemented here in most cases.
+
+It appears that the Factory Method pattern is not that much different from
+the Simple Factory pattern. Is this correct?
+If you look at the subclasses in the examples in both chapters, you may find some
+similarities. But you should not forget the key aim of the Factory Method pattern; it
+is supplying you with the framework through which different subclasses can make
+different products. In the Simple Factory pattern, you cannot vary the products in a
+similar manner. You can think of the Simple Factory pattern as a one-time deal, but most
+importantly, your creational part will not be closed for modification. Whenever you want
+to add something new, you need to add an if-else block or a switch statement in the
+factory class of your Simple Factory pattern.
+In this context, always keep in mind the GoF definition, which says, “The Factory
+Method pattern lets a class defer instantiation to subclasses.” Look at the modified
+implementation closely. You can see that CreateAnimal() creates a dog or a tiger by
+appropriate subclasses of AnimalFactory. So, CreateAnimal() is the factory method that is
+abstract in this design. When MakeAnimal() uses CreateAnimal() inside its body, it has no
+clue whether it is going to work on a dog or a tiger. The subclasses of AnimalFactory only
+know to create the concrete implementations (a dog or a tiger) for this application.

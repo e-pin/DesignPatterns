@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{5E264932-67A8-4877-9F57-AF2A122BDCEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EssentialAlgorithms", "EssentialAlgorithms\EssentialAlgorithms.csproj", "{5601D089-CD7E-4836-B7D1-DF2B50F5995D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E264932-67A8-4877-9F57-AF2A122BDCEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E264932-67A8-4877-9F57-AF2A122BDCEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E264932-67A8-4877-9F57-AF2A122BDCEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E264932-67A8-4877-9F57-AF2A122BDCEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5601D089-CD7E-4836-B7D1-DF2B50F5995D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5601D089-CD7E-4836-B7D1-DF2B50F5995D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5601D089-CD7E-4836-B7D1-DF2B50F5995D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5601D089-CD7E-4836-B7D1-DF2B50F5995D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEEC9A96-0A29-4768-87E6-0AA9BEC0AD30}
+	EndGlobalSection
+EndGlobal
