@@ -7,5 +7,6 @@ Console.WriteLine("Design patterns demos");
 //DesignPatterns.Behavioral.Observer.Context.Demo();
 //DesignPatterns.Additional.SimpleFactory.Client.Demo();
 //DesignPatterns.Creational.Factory.Client.Demo();
-DesignPatterns.Structural.Bridge.V1.Context.Demo();
+//DesignPatterns.Structural.Bridge.V1.Context.Demo();
+DesignPatterns.Structural.Decorator.Context.Demo();
 
