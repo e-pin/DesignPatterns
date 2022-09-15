@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{5E264932-67A8-4877-9F57-AF2A122BDCEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EssentialAlgorithms", "EssentialAlgorithms\EssentialAlgorithms.csproj", "{5601D089-CD7E-4836-B7D1-DF2B50F5995D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EssentialAlgorithms", "EssentialAlgorithms\EssentialAlgorithms.csproj", "{5601D089-CD7E-4836-B7D1-DF2B50F5995D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

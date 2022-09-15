@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ScratchPad
+{
+    public class Book
+    {
+        public int Id { get; set; }
+        public string? Title { get; set; }
+        private static int _lastId = 0;
+        public static List<Book> Books { get; }
+        public static int NextId => ++_lastId;
+
+        static Book()
+        {
+            Books = new List<Book>()
+            {
+                new Book()
+                {
+                    Id = 1,
+                    Title = "The C# Programming Language"
+                },
+            };
+        }
+        public Book(int? id = null)
+        {
+            Id = id ?? default;
+        }
+
+        public void Save()
+        {
+            // Create the book if it does not exist,
+            // otherwise, find its index and replace it
+            // by the current object.
+            if (Books.Any(x => x.Id == Id))
+            {
+                var index = Books.FindIndex(x => x.Id == Id);
+                Books[index] = this;
+            }
+            else
+            {
+                Books.Add(this);
+            }
+        }
+
+        public void Load()
+        {
+            if (Id == default(int))
+            {
+                throw new Exception("You must set the Id to the Book Id you want to load.");
+            }
+            // Get the book
+            var book = Books.FirstOrDefault(x => x.Id == Id);
+            // Make sure it exist
+            if (book == null)
+            {
+                throw new Exception("Book not found.");
+            }
+            // Copy the book properties to the current object
+            Id = book.Id; // this should already be set
+            Title = book.Title;
+        }
+        public void Display()
+        {
+            Console.WriteLine($"Book: {Title} ({Id})");
+        }
+    }
+}
